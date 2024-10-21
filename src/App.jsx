@@ -1,8 +1,7 @@
-
-
-// import { HomePage } from "./pages/HomePage"
 import AppRoutes from "./routes"
-// import { HomePage } from "./pages/HomePage"
+import "primereact/resources/themes/lara-light-pink/theme.css"
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
 
 function App() {
   

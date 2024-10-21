@@ -1,58 +1,46 @@
-// import styled from "styled-components";
-import { Button } from "./styles/Button"
-import { Logo } from "../components/styles/Logo"
-import theme from "../theme"
-import LogoHeader from '../assets/logo-header.svg'
-import { Input } from "../components/styles/Input"
-import  Nav, { StyledLink }  from "../components/Nav"
-import { Container } from "./Container"
-// import Image from "react"
-// import Lupa from "../assets/lupa.svg"
-
-
-// export const StyledHeader = styled.header`
-//     display: flex;
-//     flex-direction: column;
-//     justifyContent: space-around;
-//     alignItems: space-around;
-//     background-Color: ${({theme}) => theme.colors.white};
-//     width:100vw;
-//     height: 192px;
-// `
+import { NavLink } from "react-router-dom";
+import { IconField } from 'primereact/iconfield';
+import { InputIcon } from 'primereact/inputicon';
+import { InputText } from "primereact/inputtext";
+import { Button } from 'primereact/button';
+import logo from '../assets/logo-header.svg'
+import carrinho from '../assets/Frame53660.png'
+ 
 function Header(){
     return(
       <>
-            <Container
-              display = "flex"
-              flexDirection ="column"
-              justifyContent = "space-around"
-              alignItems = "space-around"
-              width = "100vw"
-              height = "192px"
-            >
-            <Container 
-              display = "flex"
-              flexDirection ="row"
-              justifyContent = "space-evenly"
-              alignItems = "center">
-              <StyledLink to="/">
-                <Logo src = {LogoHeader}/>
-              </StyledLink>
-              <Input/>
-              <StyledLink to="/">Cadastre-se</StyledLink>
-              <Button 
-                onClick={()=> console.log("clicou")}
-                backgroundColor = {theme.colors.primary} 
-                color={theme.colors.white}
-                width= {theme.sizeButtons.s.width} 
-                height = {theme.sizeButtons.s.height}
-                borderRadius = {theme.borderRadius.m}
-              >Entrar</Button>
-              {/* <Image src = {Lupa}/> */}
-              {/* Verificar importacao da lupa e do carrinho, a lupa ta dando um erro ainda nao identifiquei */}
-            </Container>
-            <Nav />
-            </Container>
+      <header className="flex flex-column w-screen justify-content-around align-content-between" style={{backgroundColor:"yellow", height:192}}>
+        <div className='flex flex-row align-items-center justify-content-around'>
+            <NavLink to="/home">
+              <img src={logo}/>
+            </NavLink>
+            <div className='flex flex-row align-items-center justify-content-around gap-3'>
+            <IconField>
+              <InputIcon className="pi pi-search"/>
+              <InputText 
+                style={{width:"559px", height:"60px"}}
+                id='busca'
+                placeholder='Pesquisar produto...'
+              />
+            </IconField>
+            <NavLink to="/">Cadastre-se</NavLink>
+            <Button className='border-round-lg' 
+              style={{backgroundColor: '#C92071', color: '#fff',width:"114px", height:"40px"}}
+              label='Entrar'
+              type='submit'
+            />
+            </div>
+            <NavLink to="/carrinho">
+              <img src={carrinho}/>
+            </NavLink>
+        </div>
+        <div className="flex flex-row gap-5">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/productlist">Produtos</NavLink>
+            <NavLink to="/productdetail">Categorias</NavLink>
+            <NavLink to="/">Meus Pedidos</NavLink>
+        </div>
+      </header>
       </>
         
     )
