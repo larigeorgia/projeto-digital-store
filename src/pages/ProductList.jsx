@@ -1,8 +1,13 @@
+import Header from "../components/Header";
 
 
 function ProductList() {
   return (
-    <div>ProductList</div>
+    <>
+      <Header />
+      <div>ProductList</div>
+    </>
+    
   )
 }
 
