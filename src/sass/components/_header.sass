@@ -1,0 +1,194 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.header 
+    @include mixins.flex(column, space-around, flex-start)
+    height: 192px
+    width: 1440px
+    // background-color: colors.$zero-color 
+    background-color: yellow 
+    // position: relative
+
+    // @media (max-width: 450px)
+    //     background-color: aqua
+    // 
+    &__search 
+        @include mixins.flex(row, space-around, center)
+        width: 1240px
+        // position: absolute
+        // position: relative
+        // flex-wrap: wrap
+
+        &__products
+            @include mixins.flex(row, space-around, center)
+            border-radius: size.$border-radius
+            height: 60px
+            width: 559px
+            border: solid 1px
+            border-color: colors.$light-gray-3-color
+            background-color: colors.$light-gray-3-color
+            position: relative
+            
+
+            &:hover
+                border-color: colors.$primary-color
+                transition: 0.2s
+            
+        
+
+        &__input
+            height: 60px
+            width: 559px
+            padding: 1rem
+            // margin: 1rem 
+            border: none
+            background-color: transparent
+            position: absolute
+            appearance: none
+            font-size: spacing.$font-16
+            letter-spacing: spacing.$letter-spacing
+
+    
+            &::placeholder
+                color: colors.$dark-gray-2-color
+            
+       
+            &:hover
+                color: colors.$primary-color
+            
+            &:focus-visible 
+                outline: none
+            
+        
+        &__icon
+            color: colors.$dark-gray-2-color
+            cursor: pointer
+            // height: 200px
+            // width: 24px
+            padding: 1rem
+            font-weight: 400px
+            font-size: 24px
+            opacity: 0.8
+            position: absolute
+            right: 5px
+
+            &:hover
+                color: colors.$primary-color
+                transition: 0.2s
+            
+        
+
+        &__access
+            @include mixins.flex(row, space-around, center)
+            width: 246px
+            // background-color: yellow
+            // position: relative
+
+    
+            &--light
+                // width: 114px
+                // height: 40px
+                // border: none
+                // cursor: pointer
+                // background-color: transparent
+                color: colors.$dark-gray-2-color
+                // text-decoration: underline
+                font-size: spacing.$font-16
+                letter-spacing: spacing.$letter-spacing
+                // background-color: yellow
+                position: relative
+
+                
+                &  .active
+                    color: colors.$primary-color
+                
+                    &:hover
+                        color: colors.$primary-color
+                
+            
+            &--solid
+                width: 114px
+                height: 40px
+                // cursor: pointer
+                @include mixins.flex(row, center, center)
+                background-color: colors.$primary-color
+                border: none
+                border-radius: size.$border-radius
+                // color: colors.$zero-color
+                font-size: spacing.$font-14
+                font-weight: bold
+                letter-spacing: spacing.$letter-spacing
+                
+            
+            
+        
+
+
+    
+    
+    &__menu
+        // width: 423px
+        height: 29px
+        // @include mixins.flex(row, flex-end, space-around)
+        // position: absolute
+        
+        &__navbar
+            @include mixins.flex(row, space-evenly, center)
+            gap:32px
+            font-size: spacing.$font-16
+            letter-spacing: spacing.$letter-spacing
+            // background-color: red
+            // color: colors.$dark-gray-2-color
+
+            &__item
+                color: colors.$dark-gray-2-color
+                // background-color: yellow
+                position: relative
+                padding-bottom: 3px
+                
+                &:hover
+                    color: colors.$primary-color
+                    // text-decoration: underline
+                    font-weight: bold
+
+                    &::after
+                        content: " "
+                        width: 100%
+                        height: 2px
+                        background-color: colors.$primary-color 
+                        position: absolute
+                        // top: 0
+                        bottom: 0
+                        // top:0
+                        left: 0
+                    
+                
+                
+            
+            
+        
+    
+
+
+
+
+// active do navlink
+.active
+    color: colors.$primary-color
+    font-weight: bold
+
+    &::after
+        content: " "
+        width: 100%
+        height: 2px
+        background-color: colors.$primary-color 
+        position: absolute
+        // top: 0
+        bottom: 0
+        // top:0
+        left: 0
+    
+
+

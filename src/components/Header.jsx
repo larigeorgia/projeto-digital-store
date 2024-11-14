@@ -7,10 +7,10 @@ function Header(){
     return(
       <>
         <header className="header">
+          <div className="header__search">
           <NavLink to="/home">
               <img src={logo}/>
           </NavLink>
-          <div className="header__search">
               <form className="header__search__products">
                   <input className="header__search__input" 
                       type="search" 
@@ -48,8 +48,9 @@ function Header(){
           <div className="header__menu">
               <ul className="header__menu__navbar">
                   <NavLink to='/' style={{textDecoration:"none"}} className="header__menu__navbar__item">Home</NavLink>
-                  <NavLink to='/categorias' style={{textDecoration:"none"}} className="header__menu__navbar__item">Categorias</NavLink>
-                  <NavLink to='/meuspedidos' style={{textDecoration:"none"}} className="header__menu__navbar__item">Meus Pedidos</NavLink>
+                  <NavLink to='/productlist' style={{textDecoration:"none"}} className="header__menu__navbar__item">Produtos</NavLink>
+                  <NavLink to='/productdetail' style={{textDecoration:"none"}} className="header__menu__navbar__item">Categorias</NavLink>
+                  <NavLink to='/' style={{textDecoration:"none"}} className="header__menu__navbar__item">Meus Pedidos</NavLink>
               </ul>
           </div>
     </header>
