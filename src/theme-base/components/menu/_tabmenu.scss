@@ -3,6 +3,7 @@
         background: $tabviewNavBg;
         border: $tabviewNavBorder;
         border-width: $tabviewNavBorderWidth;
+        
 
 
         .p-tabmenuitem {
@@ -11,7 +12,7 @@
             .p-menuitem-link {
                 border: $tabviewHeaderBorder;
                 border-width: $tabviewHeaderBorderWidth;
-                border-color: $tabviewHeaderBorderColor;
+                // border-color: $tabviewHeaderBorderColor;
                 background: $tabviewHeaderBg;
                 color: $tabviewHeaderTextColor;
                 padding: $tabviewHeaderPadding;
@@ -20,7 +21,7 @@
                 border-top-left-radius: $borderRadius;
                 transition: $listItemTransition;
                 margin: $tabviewHeaderMargin;
-                height: calc(100% + #{-5 * nth($tabviewHeaderMargin, 3)});
+                height: calc(100% + #{-2 * nth($tabviewHeaderMargin, 3)});
 
                 .p-menuitem-icon {
                     margin-right: $inlineSpacing;

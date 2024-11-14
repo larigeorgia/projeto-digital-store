@@ -9,33 +9,61 @@ import logo from '../assets/logo-header.svg'
 import carrinho from '../assets/Frame53660.png'
  
 function Header(){
-  const menu = [
-    { 
-      label: 'Home', 
-      url: '/' 
-    },
-    { 
-      label: 'Produtos', 
-      url: '/productlist' 
-    },
-    { 
-      label: 'Categorias', 
-      url: '/productdetail' 
-    },
-    { 
-      label: 'Meus Pedidos', 
-      url: '/' 
-    }
-  ]
-
     return(
       <>
-      <header className="flex flex-column h-12rem justify-content-around align-items-center" style={{width: "1440px"}}>
-        <div className='flex flex-row w-screen align-items-center justify-content-between gap-7'>
+        <header className="header">
+          <NavLink to="/home">
+              <img src={logo}/>
+          </NavLink>
+          <div className="header__search">
+              <form className="header__search__products">
+                  <input className="header__search__input" 
+                      type="search" 
+                      placeholder="Pesquisar produtos..."
+                      name="pesquisar"
+                  />
+                  <span className="header__search__icon"><i className="fa-solid fa-magnifying-glass"></i></span>
+              </form>
+              
+              <div className="header__search__access">
+                  <NavLink className="header__search__access--light"
+                  style={({ isActive}) =>{
+                      return{ 
+                          fontWeight: isActive ? 'normal' : '',
+                          color: isActive ? '#474747' : '',
+                      
+                          };
+                          }}
+                  >Cadastre-se
+                  </NavLink>
+                  <NavLink className="header__search__access--solid"
+                  style={({ isActive}) =>{
+                      return{ 
+                          fontWeight: isActive ? 'bold' : '',
+                          color: isActive ? '#ffff' : '',
+                          textDecoration: isActive ? "none" : "",
+                          };
+                          }}
+                  >Entrar</NavLink>
+              </div>
+              <NavLink to="/carrinho">
+                <img src={carrinho}/>
+              </NavLink>
+          </div>
+          <div className="header__menu">
+              <ul className="header__menu__navbar">
+                  <NavLink to='/' style={{textDecoration:"none"}} className="header__menu__navbar__item">Home</NavLink>
+                  <NavLink to='/categorias' style={{textDecoration:"none"}} className="header__menu__navbar__item">Categorias</NavLink>
+                  <NavLink to='/meuspedidos' style={{textDecoration:"none"}} className="header__menu__navbar__item">Meus Pedidos</NavLink>
+              </ul>
+          </div>
+    </header>
+      {/* <header className="flex flex-column h-12rem justify-content-around align-items-center" style={{ width: "1440px", backgroundColor: "blue"}}>
+        <div className='flex flex-row align-items-center justify-content-between gap-7' style={{width: "86%", backgroundColor: "yellow"}}>
             <NavLink to="/home">
               <img src={logo}/>
             </NavLink>
-            <div className='flex flex-row w-screen align-items-center justify-content-around gap-3'>
+            <div className='flex flex-row align-items-center justify-content-around gap-3'>
             <IconField>
               <InputIcon className="pi pi-search"/>
               <InputText 
@@ -45,7 +73,7 @@ function Header(){
               />
             </IconField>
             <NavLink to="/">Cadastre-se</NavLink>
-            <Button className='border-round-lg' 
+            <Button 
               style={{ color: '#fff',width:"114px", height:"40px"}}
               label='Entrar'
               type='submit'
@@ -55,10 +83,10 @@ function Header(){
               <img src={carrinho}/>
             </NavLink>
         </div>
-        <div>
-          <TabMenu model={menu} className="flex flex-row w-screen align-items-center gap-5 p-2" style={{width: "80%"}}/>
+        <div style={{width: "86%", backgroundColor: "yellow"}}>
+          <TabMenu model={menu} className="flex flex-row p-2" onClick={menu.index}/>
         </div>
-      </header>
+      </header> */}
       </>
         
     )
