@@ -1,9 +1,8 @@
-import AppRoutes from "./routes"
+import AppRoutes from "./AppRoutes"
 // import "primereact/resources/themes/lara-light-pink/theme.css"
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
-import './assets/themes/mytheme/theme.scss'
-
+import '../src/css/style.css'
 
 function App() {
   

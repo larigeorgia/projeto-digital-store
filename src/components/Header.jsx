@@ -1,9 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { IconField } from 'primereact/iconfield';
-import { InputIcon } from 'primereact/inputicon';
-import { InputText } from "primereact/inputtext";
-import { Button } from 'primereact/button';
-import { TabMenu } from 'primereact/tabmenu';
 
 import logo from '../assets/logo-header.svg'
 import carrinho from '../assets/Frame53660.png'
