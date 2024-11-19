@@ -1,4 +1,6 @@
+
 import Header from "../components/Header";
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -8,6 +10,7 @@ function ProductDetail() {
     <div className='flex flex-column align-items-center w-screen'>
       <Header />
       <div>ProductDetail</div>
+      <Footer/>
     </div>
 
     </>

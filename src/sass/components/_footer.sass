@@ -1,0 +1,42 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.footer
+    @include mixins.flex(column, space-around, center)
+    // @include mixins.flex($direction: column, $j-content: center, $a-items: center)
+    background-color: colors.$dark-gray-color
+    width: 1440px
+    height: 454px
+    // padding: 0
+    // margin: 0
+    &__container
+        @include mixins.flex($direction: row, $j-content: space-between, $a-items: center)
+        width: 1240px
+        height: 218px
+        // padding: 0
+        // margin: 0
+        // background-color: yellow
+        &__social
+            @include mixins.flex($direction: column, $j-content: center, $a-items: space-around)
+            width: 307px
+            height: 218px
+            &__sobre
+                color: colors.$zero-color
+                font-size: spacing.$font-16
+            &__media
+                @include mixins.flex($direction: row, $j-content: flex-start, $a-items: center)
+                width: 124.12px
+                gap: 2.19rem
+                padding: 0
+                margin: 0
+                &__icon
+                    margin: 0
+                    padding: 0
+                    color: colors.$zero-color
+                    cursor: pointer
+        &__rodape
+            @include mixins.flex($direction: column, $j-content: center, $a-items: center)
+            color: colors.$zero-color
+            font-size: spacing.$font-13

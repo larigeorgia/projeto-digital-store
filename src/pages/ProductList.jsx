@@ -1,4 +1,6 @@
+
 import Header from "../components/Header";
+import Footer from "../components/Footer/Footer";
 
 
 function ProductList() {
@@ -7,6 +9,7 @@ function ProductList() {
       <div className='flex flex-column align-items-center w-screen'>
         <Header />
       <div>ProductList</div>
+      <Footer/>
     </div>
     </>
     

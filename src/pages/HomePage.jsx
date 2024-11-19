@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header'
 
 export const HomePage = () => {
@@ -5,7 +6,7 @@ export const HomePage = () => {
     <>
       <div className='flex flex-column align-items-center w-screen'>
         <Header />
-
+        <Footer />
       </div>
     </>
     

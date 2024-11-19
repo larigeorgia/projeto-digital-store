@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import logo from '../assets/logo-header.svg'
 import carrinho from '../assets/Frame53660.png'
  
@@ -7,21 +6,22 @@ function Header(){
     return(
       <>
         <header className="header">
-          <div className="header__search">
-          <NavLink to="/home">
+        <div className="header__container">
+          <div className="header__container__search">
+          <NavLink to="/">
               <img src={logo}/>
           </NavLink>
-              <form className="header__search__products">
-                  <input className="header__search__input" 
+              <form className="header__container__search__products">
+                  <input className="header__container__search__input" 
                       type="search" 
                       placeholder="Pesquisar produtos..."
                       name="pesquisar"
                   />
-                  <span className="header__search__icon"><i className="fa-solid fa-magnifying-glass"></i></span>
+                  <span className="header__container__search__icon"><i className="fa-solid fa-magnifying-glass"></i></span>
               </form>
               
-              <div className="header__search__access">
-                  <NavLink className="header__search__access--light"
+              <div className="header__container__search__access">
+                  <NavLink className="header__container__search__access--light"
                   style={({ isActive}) =>{
                       return{ 
                           fontWeight: isActive ? 'normal' : '',
@@ -31,7 +31,7 @@ function Header(){
                           }}
                   >Cadastre-se
                   </NavLink>
-                  <NavLink className="header__search__access--solid"
+                  <NavLink className="header__container__search__access--solid"
                   style={({ isActive}) =>{
                       return{ 
                           fontWeight: isActive ? 'bold' : '',
@@ -45,14 +45,15 @@ function Header(){
                 <img src={carrinho}/>
               </NavLink>
           </div>
-          <div className="header__menu">
-              <ul className="header__menu__navbar">
-                  <NavLink to='/' style={{textDecoration:"none"}} className="header__menu__navbar__item">Home</NavLink>
-                  <NavLink to='/productlist' style={{textDecoration:"none"}} className="header__menu__navbar__item">Produtos</NavLink>
-                  <NavLink to='/productdetail' style={{textDecoration:"none"}} className="header__menu__navbar__item">Categorias</NavLink>
-                  <NavLink to='/' style={{textDecoration:"none"}} className="header__menu__navbar__item">Meus Pedidos</NavLink>
+          <div className="header__container__menu">
+              <ul className="header__container__menu__navbar">
+                  <NavLink to='/' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Home</NavLink>
+                  <NavLink to='/productlist' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Produtos</NavLink>
+                  <NavLink to='/productdetail' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Categorias</NavLink>
+                  <NavLink to='/' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Meus Pedidos</NavLink>
               </ul>
           </div>
+        </div>
     </header>
       {/* <header className="flex flex-column h-12rem justify-content-around align-items-center" style={{ width: "1440px", backgroundColor: "blue"}}>
         <div className='flex flex-row align-items-center justify-content-between gap-7' style={{width: "86%", backgroundColor: "yellow"}}>

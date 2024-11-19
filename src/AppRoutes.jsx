@@ -12,7 +12,7 @@ function AppRoutes () {
                 <Route path="/productdetail" element={<ProductDetail />}></Route>
                 <Route path="/" element={<HomePage />}></Route> 
                 {/* A rota acima esta fixada na HomePage no botao cadastre-se, para criacao futura da tela de cadastro*/}
-                <Route path="/home" element={<HomePage />}></Route>
+                {/* <Route path="/home" element={<HomePage />}></Route> */}
                 {/*A rota acima esta fixada no logo da pagina e retorna pra home  */}
                 <Route path="/carrinho" element={<HomePage />}></Route>
                 {/* A rota acima esta fixada na HomePage no carrinho, para criacao futura da tela de carrinho*/}
