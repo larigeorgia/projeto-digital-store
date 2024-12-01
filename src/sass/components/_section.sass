@@ -1,0 +1,118 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.section__container
+    width: 1240px
+    // height: 100vh
+    // background-color: pink
+    @include mixins.flex($direction: column , $j-content: center, $a-items: center)
+    margin-top: 40px
+    &__title
+        // @include mixins.flex($direction: row , $j-content: center, $a-items: flex-start)
+        // align-items: flex-start
+        // background-color: yellow
+        width: 1240px
+        // text-align: justify
+        color: colors.$dark-gray-2-color
+        letter-spacing: spacing.$letter-spacing
+        font-size: spacing.$font-24
+        font-weight: bold
+        &--center
+            color: colors.$dark-gray-2-color
+            letter-spacing: spacing.$letter-spacing
+            font-size: spacing.$font-24
+            font-weight: bold
+    &__discount
+        width: 1240px
+        height: 251px
+        @include mixins.flex($direction: row , $j-content: flex-start, $a-items: center)
+        // background-color: #cccc
+        position: relative
+        &__area
+            width: 1240px
+            height: 251px
+            // background-color: blue
+            @include mixins.flex($direction: row , $j-content: space-around, $a-items: center)
+            gap:10px
+        &__content
+            width: 202px
+            height: 220px
+            position: absolute
+            @include mixins.flex($direction: column , $j-content: space-around, $a-items: flex-start)
+            // background-color: yellow
+            margin-left: 30px
+            // gap:28px
+            &__value
+                width: 96px
+                height: 32px
+                background-color: colors.$discount-color
+                color: colors.$dark-gray-2-color
+                font-size: spacing.$font-14
+                border-radius: size.$border-radius-29
+                font-weight: bold
+                padding: 9px
+                // margin: 5px
+                text-align: center
+                // margin-left: 25px
+            &__text
+                color: colors.$dark-gray-color
+                letter-spacing: spacing.$letter-spacing-1
+                font-size: spacing.$font-32
+                font-weight: bold
+            &__image
+                width: 405px
+                height: 251px
+                border-radius: size.$border-radius-8
+            &__button
+                width: 153px
+                height: 48px
+                background-color: colors.$zero-color
+                color: colors.$primary-color
+                font-size: spacing.$font-16
+                border-radius: size.$border-radius-8
+                font-weight: bold
+                border: none
+                cursor: pointer
+                &:hover
+                    @include mixins.buttonsEffect($color: colors.$secondary-color)
+                    
+                // margin: 5px
+                // margin-bottom: 25px
+                // margin-left: 25px
+    &__destaque
+        // width: 1240px
+        height: 138px
+        // background-color: red
+        @include mixins.flex($direction: row , $j-content: center, $a-items: center)
+        // gap:20px
+        // &__content
+        //     width: 712px
+        //     height: 132px
+        //     background-color: pink
+        &__area
+            width: 1240px
+            height: 251px
+            // background-color: blue
+            @include mixins.flex($direction: row , $j-content: center, $a-items: center)
+            gap:40px
+        &__button
+            border: none
+            padding: 20px
+            border-radius: 50px
+            height: 104px
+            width: 104px
+            background-color: colors.$zero-color
+            &:hover
+                @include mixins.buttonsEffect($color: colors.$dark-gray-2-color)
+            &__image
+                fill: colors.$light-gray-2-color
+                &:hover
+                    fill: colors.$primary-color
+        &__name
+            text-align: center
+            color: colors.$dark-gray-2-color
+            letter-spacing: spacing.$letter-spacing
+            font-size: spacing.$font-14
+            font-weight: bold

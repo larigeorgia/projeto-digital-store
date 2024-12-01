@@ -7,7 +7,7 @@
     @include mixins.flex($direction: column, $j-content: space-evenly, $a-items: center)
     width: 1440px
     height: 192px
-    // background-color: colors.$zero-color 
+    background-color: colors.$zero-color 
     // background-color: yellow 
     // padding: 0
     // margin: 0
@@ -33,7 +33,7 @@
 
             &__products
                 @include mixins.flex(row, space-around, center)
-                border-radius: size.$border-radius
+                border-radius: size.$border-radius-8
                 height: 60px
                 width: 559px
                 border: solid 1px
@@ -110,12 +110,13 @@
                     // background-color: yellow
                     position: relative
 
+                    &:hover
+                         color: colors.$primary-color   
                     
-                    &  .active
-                        color: colors.$primary-color
+                    // &  .active
+                    //     color: colors.$primary-color
                     
-                        &:hover
-                            color: colors.$primary-color
+                        
                     
                 
                 &--solid
@@ -125,11 +126,14 @@
                     @include mixins.flex(row, center, center)
                     background-color: colors.$primary-color
                     border: none
-                    border-radius: size.$border-radius
+                    border-radius: size.$border-radius-8
                     // color: colors.$zero-color
                     font-size: spacing.$font-14
                     font-weight: bold
                     letter-spacing: spacing.$letter-spacing
+                    
+                    &:hover
+                        @include mixins.buttonsEffect(colors.$primary-color)
                     
                  
         
@@ -161,7 +165,17 @@
                         // text-decoration: underline
                         font-weight: bold
 
-                        &::after
+                        // &::after
+                        //     content: " "
+                        //     width: 100%
+                        //     height: 2px
+                        //     background-color: colors.$primary-color 
+                        //     position: absolute
+                        //     // top: 0
+                        //     bottom: 0
+                        //     // top:0
+                        //     left: 0
+                        &::before
                             content: " "
                             width: 100%
                             height: 2px
@@ -171,6 +185,7 @@
                             bottom: 0
                             // top:0
                             left: 0
+                            
                         
                 
                 
@@ -183,20 +198,30 @@
 
 
 // active do navlink
-.active
-    color: colors.$primary-color
-    font-weight: bold
+// .active
+//     color: colors.$primary-color
+//     font-weight: bold
 
-    &::after
-        content: " "
-        width: 100%
-        height: 2px
-        background-color: colors.$primary-color 
-        position: absolute
-        // top: 0
-        bottom: 0
-        // top:0
-        left: 0
+    // &::after
+    //     content: " "
+    //     width: 100%
+    //     height: 2px
+    //     background-color: colors.$primary-color 
+    //     position: absolute
+    //     // top: 0
+    //     bottom: 0
+    //     // top:0
+    //     left: 0
+    // &::before
+    // content: " "
+    // width: 100%
+    // height: 2px
+    // background-color: colors.$primary-color 
+    // position: absolute
+    // // top: 0
+    // bottom: 0
+    // // top:0
+    // left: 0
     
 
 

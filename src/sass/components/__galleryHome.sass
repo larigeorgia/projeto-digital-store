@@ -1,0 +1,61 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.galleryHome
+    width: 1440px
+    height: 681px
+    @include mixins.flex(column, center, space-around)
+    position: relative
+    
+    // @include mixins.flex(row, space-between, center)
+    &__container
+        // overflow-x: scroll
+        overflow-x: auto
+        scroll-snap-type: x mandatory
+        scroll-behavior: smooth
+        
+        @include mixins.flex(row, space-between, center)
+        flex-wrap: nowrap
+        &__slide
+            // scroll-snap-align: start
+        &--promo
+            @include mixins.flex(column, flex-end, baseline)
+            width: 510px
+            height: 352px
+            position: absolute
+            // background-color: yellow
+            margin: 100px
+            &--button
+                width: 220px
+                height: 48px
+                position: absolute
+                border-radius: size.$border-radius-8
+                background-color: colors.$primary-color
+                border: none
+                color: colors.$zero-color
+                font-size: spacing.$font-16
+                letter-spacing: spacing.$letter-spacing
+                font-weight: bold
+                cursor: pointer
+                &:hover
+                    @include mixins.buttonsEffect(colors.$primary-color)
+                    
+        &__buttons
+            @include mixins.flex(row, space-between, center)
+            width: 1440px
+            position: absolute
+            &--left
+                background-color: transparent
+                border: none
+                cursor: pointer
+                transform: rotate(180deg)
+            &--right
+                background-color: transparent
+                border: none
+                cursor: pointer
+
+
+
+

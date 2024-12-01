@@ -8,9 +8,10 @@ function Header(){
         <header className="header">
         <div className="header__container">
           <div className="header__container__search">
-          <NavLink to="/">
+          {/* <NavLink to="/">
               <img src={logo}/>
-          </NavLink>
+          </NavLink> */}
+          <img src={logo}/>
               <form className="header__container__search__products">
                   <input className="header__container__search__input" 
                       type="search" 
@@ -21,7 +22,7 @@ function Header(){
               </form>
               
               <div className="header__container__search__access">
-                  <NavLink className="header__container__search__access--light"
+                  <NavLink to='/criacaodeconta' className="header__container__search__access--light"
                   style={({ isActive}) =>{
                       return{ 
                           fontWeight: isActive ? 'normal' : '',
@@ -31,14 +32,15 @@ function Header(){
                           }}
                   >Cadastre-se
                   </NavLink>
-                  <NavLink className="header__container__search__access--solid"
-                  style={({ isActive}) =>{
-                      return{ 
-                          fontWeight: isActive ? 'bold' : '',
-                          color: isActive ? '#ffff' : '',
-                          textDecoration: isActive ? "none" : "",
-                          };
-                          }}
+                  <NavLink to="/login" className="header__container__search__access--solid"
+                  style={{color:'#ffff', textDecoration: 'none'}}
+                  // style={({ isActive}) =>{
+                  //     return{ 
+                  //         fontWeight: isActive ? 'bold' : '',
+                  //         // color: isActive ? '#ffff' : '',
+                  //         textDecoration: isActive ? "none" : "",
+                  //         };
+                  //         }}
                   >Entrar</NavLink>
               </div>
               <NavLink to="/carrinho">
@@ -50,7 +52,7 @@ function Header(){
                   <NavLink to='/' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Home</NavLink>
                   <NavLink to='/productlist' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Produtos</NavLink>
                   <NavLink to='/productdetail' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Categorias</NavLink>
-                  <NavLink to='/' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Meus Pedidos</NavLink>
+                  <NavLink to='/productdetail' style={{textDecoration:"none"}} className="header__container__menu__navbar__item">Meus Pedidos</NavLink>
               </ul>
           </div>
         </div>

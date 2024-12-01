@@ -1,0 +1,22 @@
+/* Error: Mixin doesn't accept a content block.
+ *   ,--> src\sass\components\__galleryHome.sass
+ * 9 |     @include mixins.flex(row, center, center)
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *   '
+ *   ,--> src\sass\tools\_mixins.sass
+ * 1 | @mixin flex($direction, $j-content, $a-items)
+ *   |        ====================================== declaration
+ *   '
+ *   src\sass\components\__galleryHome.sass 9:5  @use
+ *   src\sass\style.sass 13:1                    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Mixin doesn't accept a content block.\a   \250c \2500 \2500 > src\\sass\\components\\__galleryHome.sass\a 9 \2502      @include mixins.flex(row, center, center)\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > src\\sass\\tools\\_mixins.sass\a 1 \2502  @mixin flex($direction, $j-content, $a-items)\d\a   \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   src\\sass\\components\\__galleryHome.sass 9:5  @use\a   src\\sass\\style.sass 13:1                    root stylesheet";
+}

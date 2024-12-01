@@ -1,8 +1,7 @@
-import { NavLink} from "react-router-dom";
+// import { NavLink} from "react-router-dom";
 import logo from '../../assets/logo-footer.svg'
 import CardInformations from "./CardInformations";
 import {dadosInformacoes, dadosCategorias, dadosContatos} from "../../../src/components/Footer/data";
-
 
 
 function Footer() {
@@ -12,9 +11,10 @@ function Footer() {
       <footer className="footer">
         <div className="footer__container">
           <div className="footer__container__social">
-            <NavLink to="/">
+            {/* <NavLink to="/">
                 <img src={logo}/>
-            </NavLink>
+            </NavLink> */}
+            <img src={logo}/>
             <p className="footer__container__social__sobre">Lorem ipsum dolor sit amet,      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
               <ul className="footer__container__social__media">
                 <li>
