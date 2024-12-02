@@ -1,0 +1,44 @@
+export const tamanhos = [
+    {
+        "id":1,
+        "tamanho":37
+    },
+    {
+        "id":2,
+        "tamanho":38
+    },
+    {
+        "id":3,
+        "tamanho":39
+    },
+    {
+        "id":4,
+        "tamanho":40
+    },
+    {
+        "id":5,
+        "tamanho":41
+    },
+    {
+        "id":6,
+        "tamanho":42
+    }
+]
+export const cores = [
+    {
+        "id":1,
+        "cor":"#6FEEFF",
+    },
+    {
+        "id":2,
+        "cor":"#FF6969",
+    },
+    {
+        "id":3,
+        "cor":"#5E5E5E",
+    },
+    {
+        "id":4,
+        "cor":"#6D70B7",
+    },
+]

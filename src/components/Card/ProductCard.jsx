@@ -1,17 +1,16 @@
 import PropTypes from "prop-types"
-import  info  from './slideProductDetails'
-// import image from '../../../src/assets/nike/downshifter-vista-diagonal.webp'
-import data from  './data'
+import data from  '../data'
 
-function ProductCard() {
 
-  // const arr = info.map((obj)=>{
-  //   return Object.keys(obj).map(function(key){
-  //     return obj[key]
-  //   })
-  // })
+function ProductCard({max}) {
+
+  const result = data.filter((card)=>{
+    return(
+      card.id<max
+    )
+  })
   
-  const products = data.map((product)=>{
+  const products = result.map((product)=>{
     return (
       <div className="card" key={product.id}>
       <img className="card__image" src={product.src}/>
@@ -26,24 +25,17 @@ function ProductCard() {
     )
   })
 
+
   return (
     <>
-      {/* {Array.from({length: {limite}}).map((_, index) => 
-            <div key={index}>{products}</div>
-      )} */}
       {products}
-      {console.log(info)}
-      {/* <img src={image}/> */}
-      {/* {console.log(typeof(info))} */}
-      {/* {console.log(info)} */}
-      {/* {console.log(arr)} */}
     </>
    
   )
 }
 
 ProductCard.propTypes = {
-  info: PropTypes.array,
+  max: PropTypes.number,
 }
 
 

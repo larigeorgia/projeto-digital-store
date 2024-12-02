@@ -8,29 +8,16 @@
     width: 1440px
     height: 192px
     background-color: colors.$zero-color 
-    // background-color: yellow 
-    // padding: 0
-    // margin: 0
-    // position: relative
-
-    // @media (max-width: 450px)
-    //     background-color: aqua
-    // 
     &__container
         @include mixins.flex($direction: column, $j-content: space-between, $a-items: flex-start)
         width: 1240px
         height: 115px
-        // background-color: aqua
         padding: 0
         margin: 0
 
         &__search 
             @include mixins.flex(row, space-between, center)
             width: 1240px
-            // position: absolute
-            // position: relative
-            // flex-wrap: wrap
-
             &__products
                 @include mixins.flex(row, space-around, center)
                 border-radius: size.$border-radius-8
@@ -40,14 +27,11 @@
                 border-color: colors.$light-gray-3-color
                 background-color: colors.$light-gray-3-color
                 position: relative
-                
-
                 &:hover
                     border-color: colors.$primary-color
                     transition: 0.2s
                 
-            
-
+    
             &__input
                 height: 60px
                 width: 559px
@@ -59,15 +43,10 @@
                 appearance: none
                 font-size: spacing.$font-16
                 letter-spacing: spacing.$letter-spacing
-
-        
                 &::placeholder
                     color: colors.$dark-gray-2-color
-                
-        
                 &:hover
                     color: colors.$primary-color
-                
                 &:focus-visible 
                     outline: none
                 
@@ -75,8 +54,6 @@
             &__icon
                 color: colors.$dark-gray-2-color
                 cursor: pointer
-                // height: 200px
-                // width: 24px
                 padding: 1rem
                 font-weight: 400px
                 font-size: 24px
@@ -93,45 +70,24 @@
             &__access
                 @include mixins.flex(row, space-around, center)
                 width: 246px
-                // background-color: yellow
-                // position: relative
-
-        
                 &--light
-                    // width: 114px
-                    // height: 40px
-                    // border: none
-                    // cursor: pointer
-                    // background-color: transparent
                     color: colors.$dark-gray-2-color
-                    // text-decoration: underline
                     font-size: spacing.$font-16
                     letter-spacing: spacing.$letter-spacing
-                    // background-color: yellow
                     position: relative
-
                     &:hover
                          color: colors.$primary-color   
-                    
-                    // &  .active
-                    //     color: colors.$primary-color
-                    
-                        
-                    
                 
                 &--solid
                     width: 114px
                     height: 40px
-                    // cursor: pointer
                     @include mixins.flex(row, center, center)
                     background-color: colors.$primary-color
                     border: none
                     border-radius: size.$border-radius-8
-                    // color: colors.$zero-color
                     font-size: spacing.$font-14
                     font-weight: bold
                     letter-spacing: spacing.$letter-spacing
-                    
                     &:hover
                         @include mixins.buttonsEffect(colors.$primary-color)
                     
@@ -140,88 +96,32 @@
         &__menu
             width: 430px
             height: 29px
-            // @include mixins.flex(row, flex-end, space-around)
-            // position: absolute
-            
             &__navbar
                 @include mixins.flex(row, space-between, center)
                 gap:32px
                 font-size: spacing.$font-16
                 letter-spacing: spacing.$letter-spacing
-                // background-color: red
                 padding:0
-                // color: colors.$dark-gray-2-color
-
                 &__item
                     color: colors.$dark-gray-2-color
-                    // background-color: yellow
                     position: relative
                     padding-bottom: 3px
                     font-size: spacing.$font-16
                     letter-spacing: spacing.$letter-spacing
-                    
                     &:hover
                         color: colors.$primary-color
-                        // text-decoration: underline
                         font-weight: bold
-
-                        // &::after
-                        //     content: " "
-                        //     width: 100%
-                        //     height: 2px
-                        //     background-color: colors.$primary-color 
-                        //     position: absolute
-                        //     // top: 0
-                        //     bottom: 0
-                        //     // top:0
-                        //     left: 0
                         &::before
                             content: " "
                             width: 100%
                             height: 2px
                             background-color: colors.$primary-color 
                             position: absolute
-                            // top: 0
                             bottom: 0
-                            // top:0
                             left: 0
                             
                         
                 
                 
             
-            
         
-    
-
-
-
-
-// active do navlink
-// .active
-//     color: colors.$primary-color
-//     font-weight: bold
-
-    // &::after
-    //     content: " "
-    //     width: 100%
-    //     height: 2px
-    //     background-color: colors.$primary-color 
-    //     position: absolute
-    //     // top: 0
-    //     bottom: 0
-    //     // top:0
-    //     left: 0
-    // &::before
-    // content: " "
-    // width: 100%
-    // height: 2px
-    // background-color: colors.$primary-color 
-    // position: absolute
-    // // top: 0
-    // bottom: 0
-    // // top:0
-    // left: 0
-    
-
-

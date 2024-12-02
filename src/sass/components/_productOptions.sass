@@ -1,0 +1,47 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.options__area
+    width: 293px
+    height: 55px
+    @include mixins.flex($direction: row , $j-content: space-around , $a-items: center)
+    gap:10px
+    &--title
+        font-size: spacing.$font-14
+        font-weight: bold
+        color: colors.$light-gray-color
+        letter-spacing: spacing.$letter-spacing
+
+    &--square
+        width: 48px
+        height: 48px
+        border-radius: size.$border-radius-4
+        background-color: colors.$zero-color
+        border-color: colors.$light-gray-2-color
+        color: colors.$dark-gray-2-color
+        font-size: spacing.$font-16
+        font-weight: bold
+        letter-spacing: spacing.$letter-spacing
+        border: solid 0.5px
+        cursor: pointer
+        &:active 
+            background-color: colors.$primary-color
+            color: colors.$zero-color
+            &:before
+            content: " "
+            width: 48px
+            height: 48px
+            background-color: colors.$primary-color
+            
+    &--circle
+        width: 31px
+        height: 31px
+        border-radius: 15px
+        border: solid 3px colors.$zero-color
+        cursor: pointer
+        &:active
+            border-color: colors.$primary-color
+
+    

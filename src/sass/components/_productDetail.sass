@@ -1,0 +1,29 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.area__details
+    width: 1240px
+    margin-top:30px
+    @include mixins.flex($direction: row, $j-content: space-around , $a-items:center )
+    &__container
+        width: 1240px
+        @include mixins.flex($direction: row, $j-content: center, $a-items:flex-start)
+        &__mini
+            width: 1240px
+            height: 96px
+            @include mixins.flex($direction: row, $j-content: flex-start, $a-items:center)
+            gap:30px
+            margin-top:15px
+            &--image
+                width: 117.81px
+                height: 96px
+                box-shadow: colors.$light-gray-2-color 0px 8px 24px
+                border-radius: size.$border-radius-4
+                cursor: pointer
+                @include mixins.flex($direction: row, $j-content: space-around , $a-items:flex-start)
+
+
+
+    

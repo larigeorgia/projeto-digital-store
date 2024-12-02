@@ -2,9 +2,6 @@ import PropTypes from "prop-types"
 
 function Section({value, title, data}) {
 
-    //coleções em destaque com desconto, coleções em destaque e produtos em alta
-
-
     const colecoesEmDestaqueDesconto = data.map((item)=>{
         return(
             <div key={item.id} className="section__container__discount">
@@ -24,8 +21,6 @@ function Section({value, title, data}) {
             <div key={item.id} className="section__container__destaque">
             <div className="section__container__destaque__content">
                 <button className="section__container__destaque__button">
-                    {/* <img className="section__container__destaque__button__image" src={item.src}/> */}
-                    {/* <svg path={item.src}></svg> */}
                     <svg className="section__container__destaque__button__image" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d={item.path} />
                     </svg>
@@ -36,24 +31,11 @@ function Section({value, title, data}) {
         )
     }
     )
-    // const produtosEmAlta= data.map((item)=>{
-    //     return(
-    //         <>
-    //         <a>ver todos <img /></a>
-    //         <ProductListing value={8} data={item}/>
-    //         </>
-    //     )
-    // }
-    // )
-
+    
   return (
     <section className="section__container">
         <h2 className={(value==1)? "section__container__title" : "section__container__title--center"}>{title}</h2>
         {(value==1)? <div className="section__container__discount__area">{colecoesEmDestaqueDesconto}</div> : <div className="section__container__destaque__area">{colecoesEmDestaque}</div>}
-        {/* <div className="section__container__discount__area">{(value==1)&&(colecoesEmDestaqueDesconto)}</div>
-        <div className="section__container__destaque">{(value==2)&&(colecoesEmDestaque)}</div> */}
-        
-        {/* {(value==3)&&(produtosEmAlta)} */}
     </section>
   )
 }

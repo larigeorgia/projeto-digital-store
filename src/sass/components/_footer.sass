@@ -5,19 +5,13 @@
 
 .footer
     @include mixins.flex(column, space-around, center)
-    // @include mixins.flex($direction: column, $j-content: center, $a-items: center)
     background-color: colors.$dark-gray-color
     width: 1440px
     height: 454px
-    // padding: 0
-    // margin: 0
     &__container
         @include mixins.flex($direction: row, $j-content: space-between, $a-items: center)
         width: 1240px
         height: 218px
-        // padding: 0
-        // margin: 0
-        // background-color: yellow
         &__social
             @include mixins.flex($direction: column, $j-content: center, $a-items: space-around)
             width: 307px

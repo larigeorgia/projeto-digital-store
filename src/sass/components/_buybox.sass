@@ -1,0 +1,96 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.area__buybox
+    width: 503px
+    height: 573px
+    @include mixins.flex($direction: column , $j-content: baseline, $a-items:space-between)
+    position: relative
+    &__name
+        color: colors.$dark-gray-color
+        font-weight: bold
+        font-size: spacing.$font-32
+        letter-spacing: spacing.$letter-spacing-1
+        margin-bottom:0
+    &__reference
+        color: colors.$dark-gray-3-color
+        font-size: spacing.$font-12
+        letter-spacing: spacing.$letter-spacing-05
+        
+    &__stars
+        width: 293px
+        height: 40px
+        @include mixins.flex($direction:row , $j-content: space-between, $a-items: center)        
+        &__content
+            width: 92px
+            @include mixins.flex($direction: row , $j-content: flex-end, $a-items: space-around)
+            gap:3px
+            &--star
+                @include mixins.flex($direction: row , $j-content: space-between, $a-items:center)
+            &--number
+                border: solid 1px colors.$warning-color  
+                width: 63px
+                height: 23px
+                text-align: center
+                border-radius: size.$border-radius-8  
+                background-color: colors.$warning-color 
+                color: colors.$zero-color
+                font-weight: bold
+                font-size: spacing.$font-14
+                padding-top:2px
+                cursor: pointer
+            &--value
+                font-size: spacing.$font-14
+                color: colors.$light-gray-color
+                letter-spacing: spacing.$letter-spacing-025
+                cursor: pointer
+    &__prices
+        width: 293px
+        height: 40px
+        @include mixins.flex($direction: row , $j-content: space-around, $a-items:center)
+        &--price
+            font-size: spacing.$font-32
+            color: colors.$dark-gray-2-color
+            letter-spacing: spacing.$letter-spacing-1
+            font-weight: bold
+        &--oldPrice
+            text-decoration-line: line-through
+            font-size: spacing.$font-16
+            color: colors.$light-gray-color
+            letter-spacing: spacing.$letter-spacing
+    &__description
+        margin-bottom:0
+        &--title
+            font-size: spacing.$font-14
+            font-weight: bold
+            color: colors.$light-gray-color
+            letter-spacing: spacing.$letter-spacing
+        &--text
+            font-size: spacing.$font-14
+            color: colors.$dark-gray-color
+            letter-spacing: spacing.$letter-spacing-025
+            text-align: justify
+    &__button
+        width: 220px
+        height: 48px
+        border-radius: size.$border-radius-8  
+        background-color: colors.$warning-color 
+        border: colors.$warning-color 
+        color: colors.$light-gray-3-color
+        font-weight: bold
+        font-size: spacing.$font-16
+        letter-spacing: spacing.$letter-spacing
+        margint-top:15px
+        &:hover
+            @include mixins.buttonsEffect($color: colors.$warning-color )
+    &__options
+        width: 443px
+        height: 167px
+        margin-top: 0
+        margin-bottom: 20px
+        @include mixins.flex($direction: column , $j-content: center, $a-items:baseline)
+
+
+        

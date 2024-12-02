@@ -7,8 +7,6 @@
     @include mixins.flex(column, space-around, center)
     width: 292px
     height: 439px
-    // background-color: transparent
-    // background-color: yellow
     margin-bottom: 2rem
     border-radius: size.$border-radius-4
     cursor: pointer
@@ -21,30 +19,25 @@
         box-shadow: colors.$light-gray-2-color 0px 8px 24px
         &:hover
             @include mixins.buttonsEffect(colors.$light-gray-2-color )
-            
+
     &__content
         @include mixins.flex(column, space-around, flex-start)
         width: 292px
-        // height: 118px
-        // background-color: red
-        
         &__title
             font-size: spacing.$font-24
             letter-spacing: spacing.$letter-spacing
             &:hover
-                // color: colors.$primary-color
-                // transition: 
                 transform: scale(1.02)
-            
         &__values
             @include mixins.flex(row, space-between,center)
-            // background-color: red
-            width: 140px
-            // height: 59px
-            // margin-bottom: 5px
-            // padding: 5px
+            width: 200px
             &__pricediscount
                 color: colors.$light-gray-color
                 text-decoration-line: line-through
+                font-size: spacing.$font-18
+                letter-spacing: spacing.$letter-spacing
             &__price
                 color: colors.$dark-gray-color
+                font-weight: bold
+                font-size: spacing.$font-18
+                letter-spacing: spacing.$letter-spacing

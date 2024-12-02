@@ -4,18 +4,13 @@
 @use '../tools/_mixins'
 
 ul > a.active
-    // color: red
     color: colors.$primary-color 
     font-weight: bold
-    &:hover
-        // color: pink
     &::after
         content: " "
         width: 100%
         height: 2px
         background-color: colors.$primary-color 
         position: absolute
-        // top: 0
         bottom: 0
-        // top:0
         left: 0

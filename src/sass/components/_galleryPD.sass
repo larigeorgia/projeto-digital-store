@@ -1,0 +1,42 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+.galleryPD
+    width: 700.73px
+    height: 571px
+    @include mixins.flex(column, center, space-around)
+    position: relative
+    &__container
+        overflow-x: auto
+        scroll-snap-type: x mandatory
+        scroll-behavior: smooth
+        &::-webkit-scrollbar
+            display: none
+        @include mixins.flex(row, space-between, center)
+        flex-wrap: nowrap
+        &__slide 
+            box-shadow: colors.$light-gray-2-color 0px 8px 15px
+            &--image
+                width: 700.73px
+                height: 571px
+                border-radius: size.$border-radius-4 
+                
+        &__buttons
+            @include mixins.flex(row, space-between, center)
+            width: 700.73px
+            position: absolute
+            &--end
+                @include mixins.flex(row, flex-end, center)
+                width: 700.73px
+                position: absolute
+            &--left
+                background-color: transparent
+                border: none
+                cursor: pointer
+                transform: rotate(180deg)
+            &--right
+                background-color: transparent
+                border: none
+                cursor: pointer

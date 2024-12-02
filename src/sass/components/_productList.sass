@@ -1,0 +1,62 @@
+@use '../settings/_colors'
+@use '../settings/_size'
+@use '../settings/_spacing'
+@use '../tools/_mixins'
+
+
+.list__area
+    width: 1240px
+    @include mixins.flex($direction: row, $j-content: space-between, $a-items: flex-start)
+    gap:20px
+    margin-top: 20px
+    &__resultado
+        padding:15px
+        &--principal
+            color: colors.$dark-gray-2-color
+            font-size: spacing.$font-16
+            letter-spacing: spacing.$letter-spacing
+            font-weight: bold
+        &--secundario
+            color: colors.$dark-gray-2-color
+            font-size: spacing.$font-16
+            letter-spacing: spacing.$letter-spacing
+    &__select
+        width: 332px
+        height: 60px
+        border: solid 1px
+        border-color: colors.$dark-gray-2-color
+        @include mixins.flex($direction: row, $j-content: space-between, $a-items: center)
+        padding: 5px
+        border-radius: size.$border-radius-4
+        &--label
+            &__options
+                width: 200px
+                height: 60px
+                border: none
+                background-color: transparent
+                &:focus-visible
+                    outline: none                    
+    &__filter__area
+        width: 308px
+        height: 720px
+        @include mixins.flex($direction: column, $j-content: space-around , $a-items: flex-start)
+        padding: 30px
+        background-color: colors.$zero-color
+        border-radius: size.$border-radius-4
+        float: left
+        &--section
+            width: 932px
+        &__title
+            color: colors.$dark-gray-2-color
+            font-size: spacing.$font-16
+            letter-spacing: spacing.$letter-spacing
+            font-weight: bold
+            position: relative
+            &::before
+                content: " "
+                width: 248px
+                height: 2px
+                background-color: colors.$light-gray-2-color 
+                position: absolute
+                top:50px
+                left: 0

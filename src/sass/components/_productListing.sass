@@ -5,8 +5,6 @@
 
 .listing
     width: 1240px
-    // height: 918px
-
     @include mixins.flex($direction: column, $j-content: space-between, $a-items: center )
     &__content
         width: 1240px
@@ -18,8 +16,6 @@
             letter-spacing: spacing.$letter-spacing
             font-size: spacing.$font-18
             @include mixins.flex($direction: row, $j-content: space-around , $a-items: center )
-            // &:hover
-            //     transform: scale(1.02)
             &--transform
                 &:hover
                     transform: scale(1.02) 
@@ -32,5 +28,14 @@
     &__area
         @include mixins.flex($direction: row, $j-content: space-between , $a-items: center )
         flex-wrap: wrap
+        &--listing
+            @include mixins.flex($direction: row, $j-content: space-between , $a-items: center )
+            width: 928px
+            flex-wrap: wrap
+         
+        &--details
+            width: 1240px
+            @include mixins.flex($direction: row, $j-content: space-between , $a-items: center )
+            flex-wrap: wrap
 
     
