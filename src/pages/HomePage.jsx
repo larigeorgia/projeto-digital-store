@@ -10,7 +10,7 @@ function HomePage () {
   return (
     <>
       <div className='flex flex-column align-items-center w-screen page__area'>
-        <Header />
+        <Header value={1}/>
         <GalleryHome />
         <Section value={1} title={"Coleções em destaque"} data={coleDesconto}/>
         <Section value={2} title={"Coleções em destaque"} data={coleDestaque}/>
