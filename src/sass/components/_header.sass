@@ -7,7 +7,22 @@
     @include mixins.flex($direction: column, $j-content: space-evenly, $a-items: center)
     width: 1440px
     height: 192px
-    background-color: colors.$zero-color 
+    background-color: colors.$zero-color
+    // background-color: transparent
+    &__area
+        width: 1440px
+        height: 192px
+        background-color: colors.$zero-color
+        &--login
+            width: 1240px
+            height: 80px
+            
+    &__container--login
+        // @include mixins.flex($direction: row, $j-content: space-between, $a-items: flex-start)
+        width: 1240px
+        height: 80px
+
+        background-color: colors.$primary-color
     &__container
         @include mixins.flex($direction: column, $j-content: space-between, $a-items: flex-start)
         width: 1240px

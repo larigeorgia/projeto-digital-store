@@ -18,6 +18,20 @@
   height: 192px;
   background-color: white;
 }
+.header__area {
+  width: 1440px;
+  height: 192px;
+  background-color: white;
+}
+.header__area--login {
+  width: 1240px;
+  height: 80px;
+}
+.header__container--login {
+  width: 1240px;
+  height: 80px;
+  background-color: #C92071;
+}
 .header__container {
   display: flex;
   flex-direction: column;
