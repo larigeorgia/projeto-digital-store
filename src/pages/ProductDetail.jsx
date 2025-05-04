@@ -9,7 +9,7 @@ import ProductListing from "../components/ProductListing"
 function ProductDetail() {
   return (
     <div className='flex flex-column align-items-center w-screen page__area'>
-      <Header />
+      <Header value={1}/>
       <div className="area__details">
         <GalleryPD />
         <BuyBox />

@@ -7,7 +7,7 @@ import {marca, categoria, genero, estado} from '../components/Filter/data'
 function ProductList() {
   return (
       <div className='flex flex-column align-items-center w-screen page__area'>
-        <Header />
+        <Header value={1}/>
         <div className="list__area">
         <div className="list__area__resultado">
           <span className="list__area__resultado--principal">Resultados para “Tênis” -</span>
